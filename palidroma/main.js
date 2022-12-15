@@ -16,3 +16,11 @@ Creare una funzione per capire se la parola inserita è palindroma
  * la parola girata al contrario non cambia allora è un palidroma
  * sennò è false
  *  */
+
+const input = document.getElementById("input");
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", function (target) {
+  const name = [input.value];
+  console.log([name]);
+});
