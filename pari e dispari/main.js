@@ -12,8 +12,19 @@ Stabiliamo se la somma dei due numeri è pari o dispari
 Dichiariamo chi ha vinto.
 */
 const user = document.getElementById("usernumber");
+const btn = document.getElementById("btn");
+const num = document.getElementById("num");
 
-const max = 5;
-const min = 1;
-const cpu = Math.floor(Math.random() * max + min);
-console.log(cpu);
+const numberuser = parseInt(user.value);
+btn.addEventListener("click", function () {
+  const tot = numberuser + random;
+  console.log(tot);
+});
+
+function random() {
+  const max = 5;
+  const min = 1;
+  const cpu = Math.floor(Math.random() * max + min);
+
+  return cpu;
+}
