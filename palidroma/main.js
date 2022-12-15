@@ -12,15 +12,13 @@ Creare una funzione per capire se la parola inserita è palindroma
  * 1. aggiungere input e bottom
  * 2.aggiungere elemento in dom
  * 3.addevent con buttom e stampare in console il nome del input come array
- * 4. creare una funzione con while se
- * la parola girata al contrario non cambia allora è un palidroma
- * sennò è false
+ 
  *  */
 
 const input = document.getElementById("input");
 const btn = document.getElementById("btn");
 
-btn.addEventListener("click", function (target) {
+btn.addEventListener("click", function () {
   const name = [input.value];
-  console.log([name]);
+  console.log(name);
 });
