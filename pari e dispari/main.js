@@ -14,17 +14,25 @@ Dichiariamo chi ha vinto.
 const user = document.getElementById("usernumber");
 const btn = document.getElementById("btn");
 const num = document.getElementById("num");
+const result = document.getElementById("result");
 
 const numberuser = parseInt(user.value);
 btn.addEventListener("click", function () {
-  const tot = numberuser + random;
+  const tot = numberuser + random();
   console.log(tot);
+  const rightchoise = isEven(tot) ? "pari" : "dispari";
+  const winner = num.value === rightchoise ? "user" : "cpu";
+  result.innerText = "the winner is " + winner;
 });
 
 function random() {
   const max = 5;
   const min = 1;
-  const cpu = Math.floor(Math.random() * max + min);
-
+  let cpu = Math.floor(Math.random() * max + 1 - min) + min;
+  console.log(cpu);
   return cpu;
+}
+
+function isEven(number) {
+  return number % 2 === 0;
 }
